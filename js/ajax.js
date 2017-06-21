@@ -1,6 +1,6 @@
 var pesquisar = function(){
 	var num = $("#pesquisa").val();
-	var url = "http://pokeapi.co/api/v2/pokemon/"+num+"/";
+	var url = "https://pokeapi.co/api/v2/pokemon/"+num+"/";
 
 	$.ajax({
 		type: "GET",
