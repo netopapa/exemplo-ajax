@@ -11,8 +11,8 @@ O exemplo do link é alimentado pela <a href="https://pokeapi.co/" target="_blan
 
 <h4>→após importar jquey:</h4>
 <code>
-$.ajax({
-	type: "POST", //define o tipo da requisição
+$.ajax({<br>
+	type: "POST", //define o tipo da requisição <br>
 	url: url, //url para requsição
 	data: dados //dados a serem enviados
 	},
