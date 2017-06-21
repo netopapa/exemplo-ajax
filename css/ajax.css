@@ -7,8 +7,8 @@ body{
     background-repeat: no-repeat;
 }
 
-.dOn{
-  display: initial;
+#loading{
+  margin-top: 300px;
 }
 
 .dOff{
