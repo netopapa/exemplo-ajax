@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>AJAX - teste</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<link rel="icon" href="ajax.png">
 
 	<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
@@ -9,14 +11,12 @@
 </head>
 <body>
 	<h1 class="words"><span>A</span><span>J</span><span>A</span><span>X</span>  <span>&</span>  <span>J</span><span>Q</span><span>U</span><span>E</span><span>R</span><span>Y</span></h1>
-	<h4>JSON enviado pelo server:</h4>
-	<p id="json"></p>
+	<h4>Consumindo api pública do pokemon:</h4>
 	<div>
-		<input type="text" id="pesquisa" placeholder="infome um nome">
+		<input type="text" id="pesquisa" placeholder="Numero entre 1 e 721">
 		<button id="sbmt"><i class="fa fa-search" aria-hidden="true"></i></button>
 	</div>
-
-	<p id="dica"></p>
+	<p id="json"></p>
 </body>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
