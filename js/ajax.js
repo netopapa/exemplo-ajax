@@ -1,23 +1,17 @@
-var cont = 0;
 var pesquisar = function(){
-	cont++;
-	if (cont>2) {
-		$("#dica").html('procure por miguel, JOAO ou mariA');
-	}
-	var nome = $("#pesquisa").val();
-	var dados = "f=people&pesquisa="+nome;
+	var num = $("#pesquisa").val();
+	var url = "http://pokeapi.co/api/v2/pokemon/"+num+"/";
 
 	$.ajax({
-		type: "POST",
-		url: "http://localhost/AJAX/server.php",
-		data: dados,
+		type: "GET",
+		url: url,
 		success: function(result){
-	        $("#json").html(result);
+	        $("#json").html("nome: "+result.forms[0].name+"<br>Habilidade: "+result.abilities[0].ability.name);
     	},
     	error: function(textStatus, errorThrown){
     		console.log(textStatus);
     		console.log(errorThrown);
-    		$("#json").html('deu ruim');	
+    		$("#json").html('Não existe pokemon com esse id');	
     	}
 	});
 
