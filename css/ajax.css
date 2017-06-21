@@ -23,3 +23,31 @@ body{
 	p#dica{
 	color: grey;
 }
+
+	input{
+		outline: 0;
+		border-radius: 5px;
+		color: white;
+		border: none;
+		background-color: #424242;
+		padding: 5px 0 5px 10px;
+		font-weight: 700;
+		font-size: 15px;
+	}
+
+button{
+	outline: 0;
+	border-radius: 50%;
+	box-shadow: 0 0 5px;
+	border: 3px solid transparent;
+	transition: border .3s ease;
+}
+
+button:hover{
+	cursor: pointer;
+	border: 3px solid white;
+}
+
+button:active{
+	box-shadow: 0 0 7px;
+}
