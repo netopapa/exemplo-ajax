@@ -10,20 +10,17 @@ O exemplo do link é alimentado pela <a href="https://pokeapi.co/" target="_blan
 <h2>sintaxe básica ajax com jquey</h2>
 
 <h4>→após importar jquey:</h4>
-<code>
-$.ajax({<br>
-	type: "POST", //define o tipo da requisição <br>
-	url: url, //url para requsição
-	data: dados //dados a serem enviados
-	},
-	success: function(result){
+<code>$.ajax({</code>
+<code>type: "POST", //define o tipo da requisição</code>
+<code>url: url, //url para requsição</code>
+<code>data: dados, //dados a serem enviados</code>
+<code>success: function(result){
 		//comandos caso ocorra tudo bem com a requisição
-    },
-    error: function(textStatus, errorThrown){
+    },</code>
+<code>error: function(textStatus, errorThrown){
     	//comandos caso ocorra um erro durante a requisição
-    }
-});
-</code>
+    }</code>
+<code>});</code>
 
 <p>Confira os demais parâmetros <a href="https://www.w3schools.com/jquery/ajax_ajax.asp">aqui</a>.</p>
 
