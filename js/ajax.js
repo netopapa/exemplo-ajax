@@ -1,8 +1,3 @@
-$(document).ready(function(){
-	$("#loading").addClass("dOff");
-	$("#home").removeClass("dOff");
-});
-
 var pesquisar = function(){
 	var num = $("#pesquisa").val();
 	var url = "https://pokeapi.co/api/v2/pokemon/"+num+"/";
