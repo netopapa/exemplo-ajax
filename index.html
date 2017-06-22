@@ -6,30 +6,6 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<link rel="icon" href="ajax.png">
 
-	<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/ajax.css">
-</head>
-<body>
-	<audio id="start" src="gameboy.mp3"></audio>
-	<audio id="girl" src="girl.mp3"></audio>
-	<img id="gameboy" class="dOff tela" src="gameboy.gif">
-	<img id="troll" class="dOff tela" src="troll.gif">
-	<div id="fake" class="tela dOff"><i class="fa fa-spinner fa-pulse fa-3x fa-fw centro"></i></div>
-	<button id="btn">B</button>
-
-
-	<i id="loading" class="fa fa-asterisk fa-spin" aria-hidden="true"></i>
-	<div id="ajax" class="dOff tela">
-		<h1 class="words"><span>A</span><span>J</span><span>A</span><span>X</span>  <span>&</span>  <span>J</span><span>Q</span><span>U</span><span>E</span><span>R</span><span>Y</span></h1>
-		<h4>Consumindo api pública do pokemon:</h4>
-		<div>
-			<input type="text" id="pesquisa" placeholder="Numero entre 1 e 721">
-			<button id="sbmt"><i class="fa fa-search" aria-hidden="true"></i></button>
-		</div>
-		<p id="json"></p>
-		<i id="load" class="fa fa-spinner fa-pulse fa-3x fa-fw dOff"></i>
-	</div>
-</body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="js/ajax.js"></script>
 	<script>
@@ -65,4 +41,29 @@
 			});
 		});
 	</script>
+
+	<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/ajax.css">
+</head>
+<body>
+	<audio id="start" src="gameboy.mp3"></audio>
+	<audio id="girl" src="girl.mp3"></audio>
+	<img id="gameboy" class="dOff tela" src="gameboy.gif">
+	<img id="troll" class="dOff tela" src="troll.gif">
+	<div id="fake" class="tela dOff"><i class="fa fa-spinner fa-pulse fa-3x fa-fw centro"></i></div>
+	<button id="btn">B</button>
+
+
+	<i id="loading" class="fa fa-asterisk fa-spin" aria-hidden="true"></i>
+	<div id="ajax" class="dOff tela">
+		<h1 class="words"><span>A</span><span>J</span><span>A</span><span>X</span>  <span>&</span>  <span>J</span><span>Q</span><span>U</span><span>E</span><span>R</span><span>Y</span></h1>
+		<h4>Consumindo api pública do pokemon:</h4>
+		<div>
+			<input type="text" id="pesquisa" placeholder="Numero entre 1 e 721">
+			<button id="sbmt"><i class="fa fa-search" aria-hidden="true"></i></button>
+		</div>
+		<p id="json"></p>
+		<i id="load" class="fa fa-spinner fa-pulse fa-3x fa-fw dOff"></i>
+	</div>
+</body>
 </html>
