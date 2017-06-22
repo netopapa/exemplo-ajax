@@ -15,6 +15,35 @@ body{
   display: none;
 }
 
+#gameboy{
+    z-index: 1;
+}
+
+.tela{
+	position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -213px;
+    margin-top: 132px;
+   width: 420px;
+		}
+
+		#ajax{
+			background-color: #fff;
+			height: 279px;
+		}
+
+		#fake{
+			background-color: #fff;
+			height: 279px;
+		}
+
+		.centro{
+			position: absolute;
+		    left: 175px;
+		    top: 100px;
+		}
+
 	h1{
 	width: 350px;
 	margin: 50px auto 0 auto;
