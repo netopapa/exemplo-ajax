@@ -1,3 +1,8 @@
+$(document).ready(function(){
+	$("#loading").addClass("dOff");
+	$("#home").removeClass("dOff");
+});
+
 var pesquisar = function(){
 	var num = $("#pesquisa").val();
 	var url = "https://pokeapi.co/api/v2/pokemon/"+num+"/";
@@ -5,12 +10,16 @@ var pesquisar = function(){
 	$.ajax({
 		type: "GET",
 		url: url,
+		beforeSend: function(){
+			$("#json").html("");
+			$("#load").removeClass("dOff");
+		},
 		success: function(result){
+			$("#load").addClass("dOff");
 	        $("#json").html("nome: "+result.forms[0].name+"<br>Habilidade: "+result.abilities[0].ability.name);
     	},
     	error: function(textStatus, errorThrown){
-    		console.log(textStatus);
-    		console.log(errorThrown);
+    		$("#load").addClass("dOff");
     		$("#json").html('Não existe pokemon com esse id');	
     	}
 	});
