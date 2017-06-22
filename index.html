@@ -10,16 +10,57 @@
 	<link rel="stylesheet" type="text/css" href="css/ajax.css">
 </head>
 <body>
-	<h1 class="words"><span>A</span><span>J</span><span>A</span><span>X</span>  <span>&</span>  <span>J</span><span>Q</span><span>U</span><span>E</span><span>R</span><span>Y</span></h1>
-	<h4>Consumindo api pública do pokemon:</h4>
-	<div>
-		<input type="text" id="pesquisa" placeholder="Numero entre 1 e 721">
-		<button id="sbmt"><i class="fa fa-search" aria-hidden="true"></i></button>
-	</div>
-	<p id="json"></p>
-</body>
+	<audio id="start" src="gameboy.mp3"></audio>
+	<audio id="girl" src="girl.mp3"></audio>
+	<img id="gameboy" class="dOff tela" src="gameboy.gif">
+	<img id="troll" class="dOff tela" src="troll.gif">
+	<div id="fake" class="tela dOff"><i class="fa fa-spinner fa-pulse fa-3x fa-fw centro"></i></div>
+	<button id="btn">B</button>
 
+
+	<div id="ajax" class="dOff tela">
+		<h1 class="words"><span>A</span><span>J</span><span>A</span><span>X</span>  <span>&</span>  <span>J</span><span>Q</span><span>U</span><span>E</span><span>R</span><span>Y</span></h1>
+		<h4>Consumindo api pública do pokemon:</h4>
+		<div>
+			<input type="text" id="pesquisa" placeholder="Numero entre 1 e 721">
+			<button id="sbmt"><i class="fa fa-search" aria-hidden="true"></i></button>
+		</div>
+		<p id="json"></p>
+	</div>
+</body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="js/ajax.js"></script>
+	<script>
+		$(document).ready(function(){
+			function liga(){
+				var start = document.getElementById('start');
+				start.volume = 0.02;
+				start.play();
+				$("#gameboy").removeClass("dOff");
 
+				function hide(){
+					$("#gameboy").addClass("dOff");
+					$("#ajax").removeClass("dOff");						
+				} 
+				setTimeout(hide, 1800);
+			}
+			setTimeout(liga, 2000);
+			
+			var botao = $("#btn");
+			botao.click(function(){
+				$("#ajax").addClass("dOff");
+				$("#fake").removeClass("dOff");
+				
+				var girl = document.getElementById('girl');
+				girl.volume = 1;
+				girl.play();
+				
+				function trolla(){
+					$("#fake").addClass("dOff");
+					$("#troll").removeClass("dOff");
+				}
+				setTimeout(trolla, 5000);
+			});
+		});
+	</script>
 </html>
