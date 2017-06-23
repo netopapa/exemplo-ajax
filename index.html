@@ -4,17 +4,16 @@
 	<title>Exemplo ajax básico</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
-	<link rel="icon" href="ajax.png">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="js/ajax.js"></script>
 	<script>
-		$(document).ready(function(){
+		window.onload=function(){
 			function liga(){
 				var start = document.getElementById('start');
-				start.volume = 0.3;
+				start.volume = 0.05;
 				start.play();
 				$("#gameboy").removeClass("dOff");
+
 				function hide(){
 					$("#loading").addClass("dOff");
 					$("#gameboy").addClass("dOff");
@@ -23,25 +22,10 @@
 				setTimeout(hide, 1800);
 			}
 			setTimeout(liga, 5000);
-			
-			var botao = $("#btn");
-			botao.click(function(){
-				$("#ajax").addClass("dOff");
-				$("#fake").removeClass("dOff");
-				
-				var girl = document.getElementById('girl');
-				girl.volume = 1;
-				girl.play();
-				
-				function trolla(){
-					$("#fake").addClass("dOff");
-					$("#troll").removeClass("dOff");
-				}
-				setTimeout(trolla, 5000);
-			});
-		});
+		};
 	</script>
-
+	
+	<link rel="icon" href="ajax.png">
 	<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/ajax.css">
 </head>
@@ -66,4 +50,25 @@
 		<i id="load" class="fa fa-spinner fa-pulse fa-3x fa-fw dOff"></i>
 	</div>
 </body>
+
+<script src="js/ajax.js"></script>
+<script>
+		$(document).ready(function(){
+			var botao = $("#btn");
+			botao.click(function(){
+				$("#ajax").addClass("dOff");
+				$("#fake").removeClass("dOff");
+				
+				var girl = document.getElementById('girl');
+				girl.volume = 1;
+				girl.play();
+				
+				function trolla(){
+					$("#fake").addClass("dOff");
+					$("#troll").removeClass("dOff");
+				}
+				setTimeout(trolla, 5000);
+			});
+		});
+	</script>
 </html>
