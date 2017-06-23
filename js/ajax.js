@@ -11,7 +11,7 @@ var pesquisar = function(){
 		},
 		success: function(result){
 			$("#load").addClass("dOff");
-	        $("#json").html("nome: "+result.forms[0].name+"<br>Habilidade: "+result.abilities[0].ability.name);
+	        $("#json").html("Pokemon: "+result.forms[0].name+"<br>Habilidade: "+result.abilities[0].ability.name);
     	},
     	error: function(textStatus, errorThrown){
     		$("#load").addClass("dOff");

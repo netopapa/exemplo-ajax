@@ -11,6 +11,10 @@ body{
   margin-top: 300px;
 }
 
+#load{
+	margin-top: 10px;
+}
+
 .dOff{
   display: none;
 }
