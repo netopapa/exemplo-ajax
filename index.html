@@ -10,11 +10,12 @@
 		window.onload=function(){
 			function liga(){
 				var start = document.getElementById('start');
-				start.volume = 0.05;
 				start.play();
 				$("#gameboy").removeClass("dOff");
+				$("#luz").removeClass("dOff");
 
 				function hide(){
+					$("#btn").prop("disabled", false);
 					$("#loading").addClass("dOff");
 					$("#gameboy").addClass("dOff");
 					$("#ajax").removeClass("dOff");						
@@ -30,15 +31,27 @@
 	<link rel="stylesheet" type="text/css" href="css/ajax.css">
 </head>
 <body>
-	<audio id="start" src="gameboy.mp3"></audio>
-	<audio id="girl" src="girl.mp3"></audio>
-	<img id="gameboy" class="dOff tela" src="gameboy.gif">
-	<img id="troll" class="dOff tela" src="troll.gif">
-	<div id="fake" class="tela dOff"><i class="fa fa-spinner fa-pulse fa-3x fa-fw centro"></i></div>
-	<button id="btn">B</button>
-
-
+	<!--Loading inicial-->
 	<i id="loading" class="fa fa-asterisk fa-spin" aria-hidden="true"></i>
+
+	<!--turn on gameboy-->
+	<audio id="start" src="gameboy.mp3"></audio>
+	<img id="gameboy" class="dOff tela" src="gameboy.gif">
+	<!--red lux-->
+	<div id="luz" class="dOff"></div>
+
+	<!--start joke-->
+	<audio id="girl" src="girl.mp3"></audio>
+	<img id="troll" class="dOff tela" src="troll.gif">
+	<!--fake loading-->
+	<div id="fake" class="tela dOff"><i class="fa fa-spinner fa-pulse fa-3x fa-fw centro"></i></div>
+	
+	<!--others buttons-->
+	<button id="btn" disabled>B</button>
+	<a href="https://github.com/netopapa/exemplo-ajax/" target="_blanc"><button id="btnGit"><i class="fa fa-github" aria-hidden="true"></i></button></a>
+	<a href="https://github.com/netopapa/exemplo-ajax/archive/master.zip"><button id="download" class="dOff"><i class="fa fa-download" aria-hidden="true"></i></button></a>
+
+	<!--ajac console view-->
 	<div id="ajax" class="dOff tela">
 		<h1 class="words"><span>A</span><span>J</span><span>A</span><span>X</span>  <span>&</span>  <span>J</span><span>Q</span><span>U</span><span>E</span><span>R</span><span>Y</span></h1>
 		<h4>Consumindo api pública do pokemon:</h4>
@@ -66,6 +79,14 @@
 				function trolla(){
 					$("#fake").addClass("dOff");
 					$("#troll").removeClass("dOff");
+					function destrolla(){
+						var download = $("#download");
+						botao.addClass("dOff");
+						download.removeClass("dOff");
+						var girl = document.getElementById('girl');
+						girl.pause();
+					}
+					setTimeout(destrolla, 1500);
 				}
 				setTimeout(trolla, 5000);
 			});
